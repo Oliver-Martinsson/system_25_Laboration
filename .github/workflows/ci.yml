@@ -1,9 +1,18 @@
 name: CI
 
-on: workflow_dispatch
+
+
+
+on:
+  pull_request:
+    branches:
+      - main
+
+
 
 jobs:
- build-and-test:
+ build-and-test: 
+  name: Bygg och testa
   runs-on: ubuntu-latest
 
   steps:
