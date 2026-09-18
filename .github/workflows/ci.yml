@@ -39,7 +39,7 @@ jobs:
       env:
         STARTAD_AV: ${{ github.actor }}
         HANDELSE: ${{ github.event_name }}
-        GREN: ${{ github.ref_name }}
+        GREN: ${{ github.head_ref }}
       run: |
         echo "Startad av $STARTAD_AV -- händelse: $HANDELSE -- gren: $GREN"
         
