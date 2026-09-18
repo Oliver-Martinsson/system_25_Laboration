@@ -12,6 +12,7 @@ env:
   BUILD_CONFIGURATION: Release
 
 
+
 jobs:
  build-and-test: 
   name: Bygg och testa
@@ -31,6 +32,18 @@ jobs:
         dotnet restore
         dotnet build --no-restore --configuration $BUILD_CONFIGURATION
         dotnet test --no-build --configuration $BUILD_CONFIGURATION
+
+  
+    - name: Vem och vad startade det här?
+
+      env:
+        STARTAD_AV: ${{ github.actor }}
+        HANDELSE: ${{ github.event_name }}
+        GREN: ${{ github.ref_name }}
+      run: |
+        echo "Startad av $STARTAD_AV -- händelse: $HANDELSE -- gren: $GREN"
         
+        
+    
       
     
