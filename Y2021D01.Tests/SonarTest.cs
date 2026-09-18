@@ -15,7 +15,7 @@ public class SonarTest
        263 (increased)
      */
     
-    
+    // Kommentar för att kunna pusha ändring.
     [Theory]
     [InlineData(new int[] {199, 200, 208, 210, 200, 207, 240, 269, 260, 263}, 7)]
     [InlineData(new int[] {1,2,3,1,1,1,1}, 2)]
