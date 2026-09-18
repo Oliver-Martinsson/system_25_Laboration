@@ -8,7 +8,7 @@ public class Sonar
 
         for (int i = 1; i < depths.Length; i++)
         {
-            if (depths[i] > depths[i-1] )
+            if (depths[i] >= depths[i-1] )
             {
                 increases++;
             }
